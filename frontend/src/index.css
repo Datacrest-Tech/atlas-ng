@@ -1,17 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
   --color-ink: #ffffff;
-  --color-page: #f0eee7;
-  --color-ink-soft: #e6e2d6;
-  --color-panel: #f5f3ee;
-  --color-accent: #2f5f88;
-  --color-accent-light: #5b8fc0;
+  --color-ink-dim: #aab1c4;
+  --color-page: #faf5ea;
+  --color-ink-soft: #f1e6d3;
+  --color-panel: #fff8ee;
+  --color-accent: #b8471f;
+  --color-accent-light: #dd8347;
+  --color-navy: #1c2333;
+  --color-navy-soft: #262f47;
   --color-sage: #7c8a6b;
-  --color-cream: #12161f;
-  --color-cream-dim: #6b6a63;
-  --font-display: 'Space Grotesk', sans-serif;
+  --color-cream: #1c2333;
+  --color-cream-dim: #635c4e;
+  --font-display: 'Fraunces', serif;
   --font-body: 'Inter', sans-serif;
 }
 
@@ -26,12 +29,26 @@ body {
   overflow-x: hidden;
 }
 
+h1, h2, h3, .font-display {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
 .card-lift {
-  box-shadow: 0 1px 2px rgba(18, 22, 31, 0.04), 0 8px 24px -12px rgba(18, 22, 31, 0.12);
+  border-radius: 1.25rem;
+  box-shadow: 0 1px 2px rgba(32, 20, 10, 0.05), 0 16px 40px -16px rgba(32, 20, 10, 0.22);
+}
+
+.btn-glow {
+  box-shadow: 0 8px 24px -8px rgba(184, 71, 31, 0.55);
+}
+
+.btn-glow:hover {
+  box-shadow: 0 10px 30px -6px rgba(184, 71, 31, 0.65);
 }
 
 .bg-radial-glow {
-  background: radial-gradient(circle at 50% 50%, rgba(18, 22, 31, 0.06), transparent 65%);
+  background: radial-gradient(circle at 50% 50%, rgba(184, 71, 31, 0.12), transparent 65%);
 }
 
 ::selection {

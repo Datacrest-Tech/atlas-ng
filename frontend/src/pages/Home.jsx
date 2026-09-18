@@ -19,7 +19,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-accent-light text-sm font-medium mb-5"
+              className="text-accent text-sm font-semibold tracking-wide uppercase mb-5"
             >
               Furniture rentals · Storage · Move management
             </motion.p>
@@ -27,9 +27,9 @@ export default function Home() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-cream"
+              className="font-display font-semibold text-5xl sm:text-6xl lg:text-7xl leading-[1.02] text-cream"
             >
-              Relocation, furnished — across Nigeria and the CORT global network.
+              Relocation, <span className="text-accent">furnished</span> — across Nigeria and the CORT global network.
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 16 }}
@@ -48,14 +48,14 @@ export default function Home() {
             >
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-accent text-ink text-sm font-semibold hover:bg-accent-light transition-colors"
+                className="btn-glow inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-accent text-ink text-sm font-semibold hover:bg-accent-light transition-colors"
               >
                 Request a free quote
                 <ArrowRight size={16} />
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-black/15 text-cream text-sm font-semibold hover:border-black/40 transition-colors"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-ink text-cream text-sm font-semibold card-lift hover:-translate-y-0.5 transition-transform"
               >
                 Explore services
               </Link>
@@ -86,10 +86,10 @@ export default function Home() {
               description={COMPANY.intro}
             />
           </Reveal>
-          <Reveal delay={0.1} className="border border-black/8 bg-ink card-lift p-8">
+          <Reveal delay={0.1} className="card-lift bg-ink p-8">
             <p className="font-display text-lg text-cream">Our vision</p>
             <p className="mt-3 text-sm text-cream-dim leading-relaxed">{COMPANY.vision}</p>
-            <div className="my-6 h-px bg-black/8" />
+            <div className="my-6 h-px bg-accent/15" />
             <p className="font-display text-lg text-cream">Our mission</p>
             <p className="mt-3 text-sm text-cream-dim leading-relaxed">{COMPANY.mission}</p>
           </Reveal>
@@ -106,13 +106,11 @@ export default function Home() {
               description="Our aim is to deliver solutions that help clients with property search, relocation management, storage and furnishing — end to end."
             />
           </Reveal>
-          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-black/8 card-lift">
+          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {SERVICES.map((s, i) => (
-              <div key={s.slug} className="bg-ink">
-                <Reveal delay={i * 0.1}>
-                  <ServiceCard service={s} index={i} />
-                </Reveal>
-              </div>
+              <Reveal key={s.slug} delay={i * 0.1}>
+                <ServiceCard service={s} index={i} />
+              </Reveal>
             ))}
           </div>
         </div>
@@ -121,14 +119,14 @@ export default function Home() {
       {/* Network / image section */}
       <section className="pb-24 md:pb-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 grid md:grid-cols-2 gap-12 items-center">
-          <Reveal className="order-2 md:order-1 relative aspect-[4/3] overflow-hidden border border-black/8 card-lift">
+          <Reveal className="order-2 md:order-1 relative aspect-[4/3] overflow-hidden rounded-3xl card-lift">
             <img
               src={IMAGES.truckSunset}
               alt="Atlas relocation truck on the road at sunset"
               className="w-full h-full object-cover"
               loading="lazy"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-transparent to-transparent" />
           </Reveal>
           <Reveal delay={0.1} className="order-1 md:order-2">
             <SectionHeading
@@ -138,7 +136,7 @@ export default function Home() {
             />
             <Link
               to="/about"
-              className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-accent-light hover:text-cream transition-colors"
+              className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-cream transition-colors"
             >
               More about Atlas
               <ArrowRight size={15} />
@@ -150,14 +148,16 @@ export default function Home() {
       {/* CTA */}
       <section className="pb-24 md:pb-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <Reveal className="relative overflow-hidden border border-accent/30 bg-ink-soft card-lift px-8 py-16 md:px-16 md:py-20 text-center">
-            <p className="text-accent-light text-sm font-medium mb-4">Ready when you are</p>
-            <h2 className="font-display text-3xl md:text-4xl text-cream max-w-xl mx-auto leading-tight">
+          <Reveal className="relative overflow-hidden rounded-3xl bg-navy px-8 py-16 md:px-16 md:py-20 text-center">
+            <div className="pointer-events-none absolute -top-20 -left-20 w-72 h-72 rounded-full bg-accent/25 blur-3xl" />
+            <div className="pointer-events-none absolute -bottom-24 -right-16 w-80 h-80 rounded-full bg-accent-light/15 blur-3xl" />
+            <p className="relative text-accent-light text-sm font-semibold tracking-wide uppercase mb-4">Ready when you are</p>
+            <h2 className="relative font-display font-semibold text-3xl md:text-4xl text-ink max-w-xl mx-auto leading-tight">
               Tell us where you're moving. We'll handle the rest.
             </h2>
             <Link
               to="/contact"
-              className="mt-9 inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-accent text-ink text-sm font-semibold hover:bg-accent-light transition-colors"
+              className="btn-glow relative mt-9 inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-accent text-ink text-sm font-semibold hover:bg-accent-light transition-colors"
             >
               Request a free quote
               <ArrowRight size={16} />

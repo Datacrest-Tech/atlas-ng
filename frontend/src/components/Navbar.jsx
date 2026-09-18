@@ -26,7 +26,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-colors duration-300 ${
-        scrolled ? 'bg-ink/90 backdrop-blur-md border-b border-black/5 shadow-sm' : 'bg-transparent'
+        scrolled ? 'bg-ink/90 backdrop-blur-md shadow-[0_1px_0_rgba(32,20,10,0.06),0_12px_30px_-20px_rgba(32,20,10,0.35)]' : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20">
@@ -41,8 +41,10 @@ export default function Navbar() {
               to={l.to}
               end={l.to === '/'}
               className={({ isActive }) =>
-                `text-sm font-medium transition-colors ${
-                  isActive ? 'text-accent-light' : 'text-cream-dim hover:text-cream'
+                `relative text-sm font-semibold transition-colors pb-1 ${
+                  isActive
+                    ? 'text-accent after:absolute after:left-0 after:right-0 after:-bottom-0.5 after:h-0.5 after:rounded-full after:bg-accent'
+                    : 'text-cream-dim hover:text-cream'
                 }`
               }
             >
@@ -61,7 +63,7 @@ export default function Navbar() {
           </a>
           <Link
             to="/contact"
-            className="px-5 py-2.5 rounded-full bg-accent text-ink text-sm font-semibold hover:bg-accent-light transition-colors"
+            className="btn-glow px-5 py-2.5 rounded-full bg-accent text-ink text-sm font-semibold hover:bg-accent-light transition-colors"
           >
             Get a quote
           </Link>
@@ -83,7 +85,7 @@ export default function Navbar() {
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.25, ease: 'easeInOut' }}
-            className="md:hidden overflow-hidden bg-ink border-b border-black/5"
+            className="md:hidden overflow-hidden bg-ink shadow-[0_12px_30px_-20px_rgba(32,20,10,0.35)]"
           >
             <div className="px-6 py-6 flex flex-col gap-5">
               {LINKS.map((l) => (
@@ -93,7 +95,7 @@ export default function Navbar() {
                   end={l.to === '/'}
                   onClick={() => setOpen(false)}
                   className={({ isActive }) =>
-                    `text-base font-medium ${isActive ? 'text-accent-light' : 'text-cream-dim'}`
+                    `text-base font-semibold ${isActive ? 'text-accent' : 'text-cream-dim'}`
                   }
                 >
                   {l.label}

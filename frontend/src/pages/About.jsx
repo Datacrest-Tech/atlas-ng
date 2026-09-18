@@ -11,7 +11,7 @@ export default function About() {
       <section className="pt-32 pb-20 md:pt-40 md:pb-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <Reveal>
-            <p className="text-accent-light text-sm font-medium mb-4">About Atlas</p>
+            <p className="text-accent text-sm font-semibold tracking-wide uppercase mb-4">About Atlas</p>
             <h1 className="font-display text-4xl md:text-5xl text-cream max-w-2xl leading-tight">
               The preferred outsourcing partner for relocation in Nigeria.
             </h1>
@@ -26,7 +26,7 @@ export default function About() {
 
       <section className="py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 grid md:grid-cols-2 gap-16 items-center">
-          <Reveal className="relative aspect-[4/3] overflow-hidden border border-black/8 bg-ink card-lift flex items-center justify-center p-8">
+          <Reveal className="relative aspect-[4/3] overflow-hidden rounded-3xl bg-ink card-lift flex items-center justify-center p-8">
             <img
               src={IMAGES.cortCombined}
               alt="Atlas and CORT Global Network branding"
@@ -50,7 +50,7 @@ export default function About() {
             </ul>
             <Link
               to="/contact"
-              className="mt-9 inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-accent text-ink text-sm font-semibold hover:bg-accent-light transition-colors"
+              className="btn-glow mt-9 inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-accent text-ink text-sm font-semibold hover:bg-accent-light transition-colors"
             >
               Request a free quote
               <ArrowRight size={16} />
@@ -60,14 +60,14 @@ export default function About() {
       </section>
 
       <section className="pb-24 md:pb-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 grid md:grid-cols-2 gap-px bg-black/8 card-lift">
-          <Reveal className="bg-ink p-10 md:p-14">
-            <p className="font-display text-2xl text-cream">Our vision</p>
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 grid md:grid-cols-2 gap-5">
+          <Reveal className="card-lift bg-ink p-10 md:p-14">
+            <p className="font-display font-semibold text-2xl text-cream">Our vision</p>
             <p className="mt-4 text-cream-dim leading-relaxed">{COMPANY.vision}</p>
           </Reveal>
-          <Reveal delay={0.1} className="bg-ink p-10 md:p-14">
-            <p className="font-display text-2xl text-cream">Our mission</p>
-            <p className="mt-4 text-cream-dim leading-relaxed">{COMPANY.mission}</p>
+          <Reveal delay={0.1} className="card-lift bg-navy p-10 md:p-14">
+            <p className="font-display font-semibold text-2xl text-ink">Our mission</p>
+            <p className="mt-4 text-ink-dim leading-relaxed">{COMPANY.mission}</p>
           </Reveal>
         </div>
       </section>

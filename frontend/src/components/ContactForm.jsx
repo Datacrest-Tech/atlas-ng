@@ -64,16 +64,16 @@ export default function ContactForm({ initialMessage = '' }) {
       <motion.div
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
-        className="flex flex-col items-start gap-3 p-8 border border-accent/40 bg-accent/5"
+        className="card-lift flex flex-col items-start gap-3 p-8 bg-accent/5"
       >
-        <CheckCircle2 className="text-accent-light" size={28} />
-        <h3 className="font-display text-xl text-cream">Request received</h3>
+        <CheckCircle2 className="text-accent" size={28} />
+        <h3 className="font-display font-semibold text-xl text-cream">Request received</h3>
         <p className="text-sm text-cream-dim">
           Thanks — a member of the Atlas team will get back to you shortly.
         </p>
         <button
           onClick={() => setStatus('idle')}
-          className="mt-2 text-sm text-accent-light hover:text-cream transition-colors"
+          className="mt-2 text-sm font-semibold text-accent hover:text-cream transition-colors"
         >
           Send another request
         </button>
@@ -147,7 +147,7 @@ export default function ContactForm({ initialMessage = '' }) {
       <button
         type="submit"
         disabled={status === 'loading'}
-        className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-accent text-ink text-sm font-semibold hover:bg-accent-light transition-colors disabled:opacity-60"
+        className="btn-glow inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-accent text-ink text-sm font-semibold hover:bg-accent-light transition-colors disabled:opacity-60"
       >
         {status === 'loading' && <Loader2 size={16} className="animate-spin" />}
         {status === 'loading' ? 'Sending…' : 'Request a free quote'}
@@ -157,14 +157,15 @@ export default function ContactForm({ initialMessage = '' }) {
         .field {
           width: 100%;
           background: var(--color-ink-soft);
-          border: 1px solid rgba(0,0,0,0.08);
+          border: 1px solid transparent;
+          border-radius: 0.9rem;
           color: var(--color-cream);
-          padding: 0.85rem 1rem;
+          padding: 0.85rem 1.1rem;
           font-size: 0.9rem;
-          transition: border-color 0.2s ease;
+          transition: border-color 0.2s ease, box-shadow 0.2s ease;
         }
         .field::placeholder { color: var(--color-cream-dim); opacity: 0.6; }
-        .field:focus { outline: none; border-color: var(--color-accent); }
+        .field:focus { outline: none; border-color: var(--color-accent); box-shadow: 0 0 0 3px rgba(184, 71, 31, 0.12); }
       `}</style>
     </form>
   )
@@ -174,7 +175,7 @@ function Field({ label, required, children }) {
   return (
     <label className="block">
       <span className="block text-xs font-medium text-cream-dim mb-2">
-        {label}{required && <span className="text-accent-light"> *</span>}
+        {label}{required && <span className="text-accent"> *</span>}
       </span>
       {children}
     </label>

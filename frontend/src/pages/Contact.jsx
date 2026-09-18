@@ -13,7 +13,7 @@ export default function Contact() {
       <section className="pt-32 pb-16 md:pt-40 md:pb-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <Reveal>
-            <p className="text-accent-light text-sm font-medium mb-4">
+            <p className="text-accent text-sm font-semibold tracking-wide uppercase mb-4">
               {hub ? `Get in touch — ${hub}` : 'Get in touch'}
             </p>
             <h1 className="font-display text-4xl md:text-5xl text-cream max-w-2xl leading-tight">
@@ -40,11 +40,11 @@ export default function Contact() {
 
       <section className="pb-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <Reveal className="border border-black/8 overflow-hidden aspect-[16/7] card-lift">
+          <Reveal className="overflow-hidden rounded-3xl aspect-[16/7] card-lift">
             <iframe
               title="Atlas office location"
               src={mapSrc}
-              className="w-full h-full grayscale contrast-125 opacity-90"
+              className="w-full h-full"
               loading="lazy"
             />
           </Reveal>
@@ -56,8 +56,8 @@ export default function Contact() {
 
 function ContactItem({ icon: Icon, label, value, href }) {
   const content = (
-    <div className="flex items-start gap-4 border border-black/8 bg-ink card-lift p-6">
-      <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent-light shrink-0">
+    <div className="flex items-start gap-4 card-lift bg-ink p-6">
+      <div className="w-10 h-10 rounded-xl bg-accent flex items-center justify-center text-ink shrink-0">
         <Icon size={17} />
       </div>
       <div>
@@ -66,5 +66,5 @@ function ContactItem({ icon: Icon, label, value, href }) {
       </div>
     </div>
   )
-  return href ? <a href={href} className="block hover:border-accent/50 transition-colors">{content}</a> : content
+  return href ? <a href={href} className="block hover:-translate-y-0.5 transition-transform">{content}</a> : content
 }
