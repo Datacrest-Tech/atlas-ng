@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Mail, Phone, MapPin } from 'lucide-react'
 import { FacebookIcon, TwitterIcon, InstagramIcon } from './SocialIcons'
+import CortBadge from './CortBadge'
 import { COMPANY, IMAGES } from '../data/content'
 
 export default function Footer() {
@@ -28,6 +29,7 @@ export default function Footer() {
               <InstagramIcon />
             </a>
           </div>
+          <CortBadge className="mt-7" labelClassName="text-ink-dim" label="Backed by 80+ CORT Global Network partners worldwide." />
         </div>
 
         <div>

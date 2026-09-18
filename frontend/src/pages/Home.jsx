@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import AfricaMap from '../components/AfricaMap'
 import Reveal from '../components/Reveal'
 import SectionHeading from '../components/SectionHeading'
 import ServiceCard from '../components/ServiceCard'
 import StatBar from '../components/StatBar'
-import { COMPANY, SERVICES, IMAGES } from '../data/content'
+import CortBadge from '../components/CortBadge'
+import { COMPANY, SERVICES, IMAGES, PROCESS, NETWORK_BENEFITS } from '../data/content'
 
 export default function Home() {
   return (
@@ -60,6 +61,14 @@ export default function Home() {
               >
                 Explore services
               </Link>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.4 }}
+              className="mt-10"
+            >
+              <CortBadge label="Proud member of the CORT Global Network, 80+ partners worldwide." />
             </motion.div>
           </div>
 
@@ -117,6 +126,28 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Process */}
+      <section className="pb-24 md:pb-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <Reveal>
+            <SectionHeading
+              kicker="How it works"
+              title="Three steps from request to move-in day."
+              description="No matter the size of the job, the process stays the same: tell us what you need, we plan it in detail, and our own team delivers it."
+            />
+          </Reveal>
+          <div className="mt-14 grid sm:grid-cols-3 gap-5">
+            {PROCESS.map((p) => (
+              <Reveal key={p.step} delay={Number(p.step) * 0.08} className="card-lift bg-ink p-8">
+                <span className="font-display text-3xl text-accent/40">{p.step}</span>
+                <h3 className="mt-4 font-display font-semibold text-lg text-cream">{p.title}</h3>
+                <p className="mt-3 text-sm text-cream-dim leading-relaxed">{p.text}</p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Network / image section */}
       <section className="pb-24 md:pb-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 grid md:grid-cols-2 gap-12 items-center">
@@ -128,6 +159,9 @@ export default function Home() {
               loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-transparent to-transparent" />
+            <div className="absolute bottom-5 left-5">
+              <CortBadge />
+            </div>
           </Reveal>
           <Reveal delay={0.1} className="order-1 md:order-2">
             <SectionHeading
@@ -135,6 +169,14 @@ export default function Home() {
               title="Part of the CORT Global Network."
               description={COMPANY.network}
             />
+            <ul className="mt-6 space-y-3">
+              {NETWORK_BENEFITS.map((benefit) => (
+                <li key={benefit} className="flex items-start gap-3">
+                  <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-accent" />
+                  <span className="text-sm text-cream-dim leading-relaxed">{benefit}</span>
+                </li>
+              ))}
+            </ul>
             <Link
               to="/about"
               className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-cream transition-colors"

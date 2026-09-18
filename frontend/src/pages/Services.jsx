@@ -2,7 +2,8 @@ import { useEffect } from 'react'
 import { useLocation, Link } from 'react-router-dom'
 import { Sofa, Warehouse, Route, Check, ArrowRight } from 'lucide-react'
 import Reveal from '../components/Reveal'
-import { SERVICES } from '../data/content'
+import SectionHeading from '../components/SectionHeading'
+import { SERVICES, FAQS } from '../data/content'
 
 const ICONS = { sofa: Sofa, warehouse: Warehouse, route: Route }
 
@@ -66,6 +67,22 @@ export default function Services() {
           )
         })}
       </div>
+
+      <section className="py-24 md:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <Reveal>
+            <SectionHeading kicker="FAQ" title="Common questions." />
+          </Reveal>
+          <div className="mt-12 grid md:grid-cols-2 gap-5">
+            {FAQS.map((f, i) => (
+              <Reveal key={f.q} delay={(i % 4) * 0.06} className="card-lift bg-ink p-7">
+                <p className="font-display font-semibold text-base text-cream">{f.q}</p>
+                <p className="mt-3 text-sm text-cream-dim leading-relaxed">{f.a}</p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   )
 }

@@ -61,11 +61,52 @@ export const SERVICES = [
   },
 ]
 
+export const PROCESS = [
+  {
+    step: '01',
+    title: 'Tell us what you need',
+    text: 'Share your move date, locations and the services you need: furniture, storage, or full move management.',
+  },
+  {
+    step: '02',
+    title: 'We plan the details',
+    text: 'Our team scopes an inventoried plan with a single point of contact, whether the move is local or cross-border.',
+  },
+  {
+    step: '03',
+    title: 'Delivered & set up',
+    text: 'Furniture is delivered, assembled and styled by our own team, with careful packing and handling on move day.',
+  },
+]
+
 export const NETWORK_BENEFITS = [
   'More than 80 partners spanning every inhabited continent',
   'Consistent quality standards and pricing across every location',
   'A single point of contact, even for cross-border relocations',
   'Responsive communication from quote through delivery',
+]
+
+export const FAQS = [
+  {
+    q: 'Do you offer both short-term and long-term furniture rentals?',
+    a: 'Yes. Furniture packages for homes and offices are available on short and long-term terms, delivered, assembled and styled by our own team.',
+  },
+  {
+    q: 'Is delivery and setup included?',
+    a: 'Every furniture package includes delivery, setup and pickup, so there is nothing left for you to assemble.',
+  },
+  {
+    q: 'Can you manage a cross-border move?',
+    a: 'Yes. We plan and execute local, national and cross-border relocations, including customs coordination, backed by the CORT Global Network of 80+ partners.',
+  },
+  {
+    q: 'Is storage inventoried and secure?',
+    a: 'Our storage facility is inventoried and access-controlled, with short and long-term plans and easy retrieval scheduling.',
+  },
+  {
+    q: 'Where does Atlas operate?',
+    a: 'We are headquartered in Ikoyi, Lagos, Nigeria, with services across continental Africa and, through the CORT Global Network, partners in 17 countries worldwide.',
+  },
 ]
 
 export const STATS = [
