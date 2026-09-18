@@ -29,7 +29,9 @@ export default function Home() {
               transition={{ duration: 0.7, delay: 0.1 }}
               className="font-display font-semibold text-5xl sm:text-6xl lg:text-7xl leading-[1.02] text-cream"
             >
-              Relocation, <span className="text-accent">furnished</span> — across Nigeria and the CORT global network.
+              We move you in,
+              <br />
+              <span className="text-accent">fully furnished.</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 16 }}
@@ -37,8 +39,7 @@ export default function Home() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="mt-6 text-cream-dim leading-relaxed max-w-md"
             >
-              {COMPANY.tagline} From a single rented sofa to a full cross-border office move,
-              our team handles it, backed by 80+ partners worldwide.
+              {COMPANY.tagline} From a single rented sofa to a full cross-border office move, our team handles it in Nigeria and across the CORT global network of 80+ partners.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 16 }}
@@ -103,7 +104,7 @@ export default function Home() {
             <SectionHeading
               kicker="What we do"
               title="Three services, one accountable team."
-              description="Our aim is to deliver solutions that help clients with property search, relocation management, storage and furnishing — end to end."
+              description="Our aim is to deliver solutions that help clients with property search, relocation management, storage and furnishing, end to end."
             />
           </Reveal>
           <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">

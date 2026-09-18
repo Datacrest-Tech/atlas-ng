@@ -14,7 +14,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <Reveal>
             <p className="text-accent text-sm font-semibold tracking-wide uppercase mb-4">
-              {hub ? `Get in touch — ${hub}` : 'Get in touch'}
+              {hub ? `Get in touch: ${hub}` : 'Get in touch'}
             </p>
             <h1 className="font-display text-4xl md:text-5xl text-cream max-w-2xl leading-tight">
               Tell us what you're moving, we'll take it from there.

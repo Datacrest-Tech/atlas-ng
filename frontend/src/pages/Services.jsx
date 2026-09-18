@@ -38,7 +38,7 @@ export default function Services() {
               <div className="max-w-7xl mx-auto px-6 lg:px-10 grid md:grid-cols-2 gap-14 items-center">
                 <Reveal className={reversed ? 'md:order-2' : ''}>
                   <span className="font-display text-xs text-cream-dim/50">0{i + 1}</span>
-                  <div className="mt-4 w-14 h-14 rounded-2xl bg-accent flex items-center justify-center text-ink shadow-[0_8px_20px_-8px_rgba(184,71,31,0.6)]">
+                  <div className="mt-4 w-14 h-14 rounded-2xl bg-accent flex items-center justify-center text-ink shadow-[0_8px_20px_-8px_rgba(47,95,136,0.5)]">
                     <Icon size={26} />
                   </div>
                   <h2 className="mt-6 font-display font-semibold text-3xl text-cream">{s.title}</h2>

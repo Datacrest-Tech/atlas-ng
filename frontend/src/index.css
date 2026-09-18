@@ -7,8 +7,8 @@
   --color-page: #faf5ea;
   --color-ink-soft: #f1e6d3;
   --color-panel: #fff8ee;
-  --color-accent: #b8471f;
-  --color-accent-light: #dd8347;
+  --color-accent: #2f5f88;
+  --color-accent-light: #5b8fc0;
   --color-navy: #1c2333;
   --color-navy-soft: #262f47;
   --color-sage: #7c8a6b;
@@ -40,15 +40,15 @@ h1, h2, h3, .font-display {
 }
 
 .btn-glow {
-  box-shadow: 0 8px 24px -8px rgba(184, 71, 31, 0.55);
+  box-shadow: 0 8px 24px -8px rgba(47, 95, 136, 0.55);
 }
 
 .btn-glow:hover {
-  box-shadow: 0 10px 30px -6px rgba(184, 71, 31, 0.65);
+  box-shadow: 0 10px 30px -6px rgba(47, 95, 136, 0.65);
 }
 
 .bg-radial-glow {
-  background: radial-gradient(circle at 50% 50%, rgba(184, 71, 31, 0.12), transparent 65%);
+  background: radial-gradient(circle at 50% 50%, rgba(47, 95, 136, 0.12), transparent 65%);
 }
 
 ::selection {

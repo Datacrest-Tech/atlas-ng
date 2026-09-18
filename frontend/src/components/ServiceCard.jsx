@@ -16,7 +16,7 @@ export default function ServiceCard({ service, index }) {
       </span>
 
       <div>
-        <div className="w-12 h-12 rounded-2xl bg-accent flex items-center justify-center text-ink shadow-[0_8px_20px_-8px_rgba(184,71,31,0.6)] group-hover:scale-105 transition-transform duration-300">
+        <div className="w-12 h-12 rounded-2xl bg-accent flex items-center justify-center text-ink shadow-[0_8px_20px_-8px_rgba(47,95,136,0.5)] group-hover:scale-105 transition-transform duration-300">
           <Icon size={22} />
         </div>
         <h3 className="mt-6 font-display text-xl text-cream">{service.title}</h3>

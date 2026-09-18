@@ -25,7 +25,7 @@ export default function ContactForm({ initialMessage = '' }) {
     if (!WEB3FORMS_KEY) {
       setStatus('error')
       setErrorMsg(
-        "Form isn't configured yet — add a free Web3Forms access key as VITE_WEB3FORMS_KEY in your .env file (see README)."
+        "Form isn't configured yet: add a free Web3Forms access key as VITE_WEB3FORMS_KEY in your .env file (see README)."
       )
       return
     }
@@ -69,7 +69,7 @@ export default function ContactForm({ initialMessage = '' }) {
         <CheckCircle2 className="text-accent" size={28} />
         <h3 className="font-display font-semibold text-xl text-cream">Request received</h3>
         <p className="text-sm text-cream-dim">
-          Thanks — a member of the Atlas team will get back to you shortly.
+          Thanks, a member of the Atlas team will get back to you shortly.
         </p>
         <button
           onClick={() => setStatus('idle')}
@@ -165,7 +165,7 @@ export default function ContactForm({ initialMessage = '' }) {
           transition: border-color 0.2s ease, box-shadow 0.2s ease;
         }
         .field::placeholder { color: var(--color-cream-dim); opacity: 0.6; }
-        .field:focus { outline: none; border-color: var(--color-accent); box-shadow: 0 0 0 3px rgba(184, 71, 31, 0.12); }
+        .field:focus { outline: none; border-color: var(--color-accent); box-shadow: 0 0 0 3px rgba(47, 95, 136, 0.15); }
       `}</style>
     </form>
   )

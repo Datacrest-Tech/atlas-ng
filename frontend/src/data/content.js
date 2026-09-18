@@ -22,13 +22,13 @@ export const COMPANY = {
     twitter: 'https://www.twitter.com/atlasfrentals',
     instagram: 'https://www.instagram.com/atlasfurniturerentals',
   },
-  tagline: 'Furniture, storage and move management — across Africa, on your timeline.',
+  tagline: 'Furniture, storage and move management across Africa, on your timeline.',
   intro:
-    'Atlas Furniture Rentals is a leading furniture rental, storage and move management company. Headquartered in Nigeria, we provide services across continental Africa. The expertise of our workforce, our commitment to integrity and accountability, and our network of strategic partners let us deliver a one-stop relocation solution — anywhere, anytime.',
+    'Atlas Furniture Rentals is a leading furniture rental, storage and move management company. Headquartered in Nigeria, we provide services across continental Africa. The expertise of our workforce, our commitment to integrity and accountability, and our network of strategic partners let us deliver a one-stop relocation solution, anywhere, anytime.',
   vision: 'To be the market\u2019s first choice furniture rental service provider in Nigeria.',
   mission: 'To provide furniture and move management services to every client, professionally and on time.',
   network:
-    'Atlas is a member of the CORT Global Network — more than 80 partners worldwide, focused on client satisfaction, responsive communication, and quality service delivery.',
+    'Atlas is a member of the CORT Global Network, more than 80 partners worldwide, focused on client satisfaction, responsive communication, and quality service delivery.',
 }
 
 export const SERVICES = [
@@ -38,7 +38,7 @@ export const SERVICES = [
     title: 'Furniture Rentals & Supplies',
     short: 'Fully furnished homes and offices, delivered and installed fast.',
     description:
-      'From single pieces to full apartment and office fit-outs, we supply quality rental furniture for short and long-term stays — ideal for relocating staff, diplomats, and corporate housing. Every package is delivered, assembled and styled by our own team.',
+      'From single pieces to full apartment and office fit-outs, we supply quality rental furniture for short and long-term stays, ideal for relocating staff, diplomats, and corporate housing. Every package is delivered, assembled and styled by our own team.',
     points: ['Residential & office packages', 'Short and long-term terms', 'Delivery, setup & pickup included', 'Flexible upgrades as your needs change'],
   },
   {
@@ -47,14 +47,14 @@ export const SERVICES = [
     title: 'Storage Facility',
     short: 'Secure, climate-aware storage for furniture, files and household goods.',
     description:
-      'Our storage facility keeps your belongings safe between moves — whether you\u2019re between homes, downsizing an office, or archiving records. Inventoried, access-controlled, and available on flexible terms.',
+      'Our storage facility keeps your belongings safe between moves, whether you\u2019re between homes, downsizing an office, or archiving records. Inventoried, access-controlled, and available on flexible terms.',
     points: ['Inventoried & itemised storage', 'Access-controlled facility', 'Short & long-term plans', 'Easy retrieval scheduling'],
   },
   {
     slug: 'move-management',
     icon: 'route',
     title: 'Move Management',
-    short: 'End-to-end relocation — local, national, or cross-border.',
+    short: 'End-to-end relocation, local, national, or cross-border.',
     description:
       'We plan and execute the full move: packing, transport, customs coordination for cross-border relocations, and destination setup. Backed by the CORT Global Network of 80+ partners, we manage relocations anywhere our clients need to be.',
     points: ['Local, national & cross-border moves', 'Packing & careful handling', 'Destination services', 'Single point of contact throughout'],
