@@ -61,6 +61,13 @@ export const SERVICES = [
   },
 ]
 
+export const NETWORK_BENEFITS = [
+  'More than 80 partners spanning every inhabited continent',
+  'Consistent quality standards and pricing across every location',
+  'A single point of contact, even for cross-border relocations',
+  'Responsive communication from quote through delivery',
+]
+
 export const STATS = [
   { label: 'CORT network partners', value: '80+' },
   { label: 'Countries served', value: '17' },

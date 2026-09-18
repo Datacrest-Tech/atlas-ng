@@ -1,7 +1,9 @@
+import { Link } from 'react-router-dom'
+import { CheckCircle2, ArrowRight } from 'lucide-react'
 import Reveal from '../components/Reveal'
 import SectionHeading from '../components/SectionHeading'
 import StatBar from '../components/StatBar'
-import { COMPANY, IMAGES } from '../data/content'
+import { COMPANY, IMAGES, NETWORK_BENEFITS } from '../data/content'
 
 export default function About() {
   return (
@@ -38,6 +40,21 @@ export default function About() {
               title="A member of the CORT Global Network."
               description={COMPANY.network}
             />
+            <ul className="mt-8 space-y-4">
+              {NETWORK_BENEFITS.map((benefit) => (
+                <li key={benefit} className="flex items-start gap-3">
+                  <CheckCircle2 size={20} className="mt-0.5 shrink-0 text-accent" />
+                  <span className="text-sm text-cream-dim leading-relaxed">{benefit}</span>
+                </li>
+              ))}
+            </ul>
+            <Link
+              to="/contact"
+              className="mt-9 inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-accent text-ink text-sm font-semibold hover:bg-accent-light transition-colors"
+            >
+              Request a free quote
+              <ArrowRight size={16} />
+            </Link>
           </Reveal>
         </div>
       </section>
