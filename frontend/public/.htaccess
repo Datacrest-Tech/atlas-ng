@@ -1,0 +1,14 @@
+# React Router (client-side routing) needs every unmatched request to
+# fall through to index.html so the app can render the right route.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Serve real files and directories (assets, images, etc.) directly.
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Everything else goes to index.html for React Router to handle.
+  RewriteRule ^ index.html [L]
+</IfModule>
